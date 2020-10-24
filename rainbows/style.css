@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.rainbow {
+  position: fixed;
+  top: -1vh;
+  font-size: 5rem;
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/transform */
+  transform: translateY(0);
+  animation: fall 3s linear forwards;
+}
+
+/*
+The @keyframes rule specifies the animation code. 
+The animation is created by gradually changing from one set of CSS styles to another. 
+... 0% is the beginning of the animation, 100% is when the animation is complete. 
+Tip: For best browser support, you should always define both the 0% and the 100% selectors.
+*/
+@keyframes fall {
+  to {
+    transform: translateY(105vh);
+  }
+}
